@@ -1,26 +1,128 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@source "../node_modules/streamdown/dist/index.js";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Hide scrollbar for WebKit browsers */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Edge */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Hide scrollbar for other browsers */
+.scroll-container {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  overflow: -moz-scrollbars-none;
+  /* Older versions of Firefox */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Fallback for Safari (optional - not needed if the scrollbar is hidden in webkit above) */
+.scroll-container {
+  overflow: auto;
+  /* Ensures scrollable content */
+}
+
+@property --border-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
+}
+
+/* Gray shimmer text utility */
+@keyframes shimmer-text-x {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .text-shimmer-gray {
+    background-image: linear-gradient(110deg,
+        #9ca3af 0%,
+        #9ca3af 50%,
+        #6b7280 80%,
+        #9ca3af 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer-text-x 1.6s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-shimmer-gray {
+    animation: none !important;
+    background: none !important;
+    -webkit-text-fill-color: #6b7280;
+    /* gray-500 */
+    color: #6b7280;
+  }
+}
+
+@layer components {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-poppins;
+  }
+
+  .formik-form input,
+  select {
+    @apply my-5 bg-transparent p-3 border border-blue-400 focus:outline-none focus:bg-transparent text-black;
+  }
+
+  .field_label {
+    @apply text-black;
+  }
+
+  .fields {
+    @apply border border-blue-400 focus:outline-none focus:bg-transparent text-black px-2 py-2 w-full my-5;
+  }
+
+  .form {
+    @apply sm:px-32 md:px-40 lg:px-64 xl:px-[30%] 2xl:px-[35%];
+  }
+
+  .carousel-heading {
+    @apply text-white text-3xl font-semibold font-poppins;
+  }
+
+  .carousel-desc {
+    @apply text-white text-4xl font-bold;
+  }
+
+  .carousel-icons {
+    @apply w-40 h-40 object-contain;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d3d3d360;
+  transition: all;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d3d3d3;
+  transition: all;
 }

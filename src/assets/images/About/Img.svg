@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.97 291.97">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #16151d;
+      }
+
+      .cls-3 {
+        fill: #17233b;
+      }
+
+      .cls-4 {
+        opacity: .3;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="143.94" y1="13.27" x2="147.77" y2="262.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d3687c"/>
+      <stop offset=".07" stop-color="#cb6492"/>
+      <stop offset=".2" stop-color="#bf5db4"/>
+      <stop offset=".34" stop-color="#b659ce"/>
+      <stop offset=".47" stop-color="#b055e1"/>
+      <stop offset=".61" stop-color="#ac53ed"/>
+      <stop offset=".76" stop-color="#ab53f1"/>
+      <stop offset=".97" stop-color="#8658e9"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <rect class="cls-3" y="0" width="291.97" height="291.97" rx="120.92" ry="120.92"/>
+        <rect class="cls-1" x="33.22" y="33.22" width="225.52" height="225.52" rx="93.4" ry="93.4"/>
+      </g>
+      <g>
+        <g class="cls-4">
+          <rect class="cls-2" x="88.76" y="100.3" width="114.45" height="12.86"/>
+          <rect class="cls-2" x="88.76" y="140.15" width="22.45" height="12.86"/>
+          <rect class="cls-2" x="88.76" y="179.65" width="114.45" height="12.72"/>
+        </g>
+        <polygon class="cls-2" points="153.34 179.65 128.23 179.65 122.8 174.22 122.8 158.68 128.64 152.84 167.44 152.84 167.44 139.98 128.64 139.98 122.8 134.13 122.8 117.75 127.38 113.16 154.19 113.16 163.95 122.93 181.41 105.47 163.95 88.02 151.67 100.3 129.9 100.3 117.61 88.02 100.16 105.47 111.85 117.16 111.85 134.72 100.16 146.41 111.85 158.1 111.85 174.8 100.16 186.5 117.61 203.95 129.05 192.52 152.52 192.52 163.95 203.95 181.41 186.5 163.95 169.04 153.34 179.65"/>
+      </g>
+    </g>
+  </g>
+</svg>
