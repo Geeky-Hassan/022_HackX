@@ -1,0 +1,15 @@
+{
+  "name": "MyPath",
+  "short_name": "PathAI",
+  "theme_color": "#3658F8",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "natural",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {"public": "/Icons/icons-192.png", "type": "image/png", "sizes": "192x192"},
+    {"public": "/Icons/icons-256.png", "type": "image/png", "sizes": "256x256"},
+    {"public": "/Icons/icons-512.png", "type": "image/png", "sizes": "512x512"}
+  ]
+}

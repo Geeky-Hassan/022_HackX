@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar for WebKit browsers */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Edge */
+}
+
+/* Hide scrollbar for other browsers */
+.scroll-container {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  overflow: -moz-scrollbars-none;
+  /* Older versions of Firefox */
+}
+
+/* Fallback for Safari (optional - not needed if the scrollbar is hidden in webkit above) */
+.scroll-container {
+  overflow: auto;
+  /* Ensures scrollable content */
+}
+
+.mermaid-container {
+  contain: layout style paint;
+}
+
+.mermaid-svg-container svg text {
+  fill: #111 !important;
+  font-family: Arial, sans-serif !important;
+}
+
+@layer components {
+
+  html,
+  body {
+    @apply bg-white/80 m-0 p-0 w-full h-full selection:bg-dark-button-blue selection:text-light-light-white;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  .icon-color {
+    @apply text-light-light-black;
+  }
+
+  .reglo-form {
+    @apply max-w-lg sm:max-w-md xl:max-w-xl;
+  }
+
+  .reglo-input-field {
+    @apply w-full px-3 py-2 border border-text-blue/40 text-dark-custom-blue placeholder:text-slate-600 bg-text-blue/5 rounded-md pl-10 outline-none;
+  }
+
+  .profile-input-field {
+    @apply w-full px-4 py-4 border border-dark-custom-blue text-dark-custom-blue placeholder:text-slate-400 bg-white rounded-md outline-none;
+  }
+
+  .smi-input-field {
+    @apply bg-light-light-white;
+  }
+
+  .chatIcon {
+    @apply size-5;
+  }
+
+  .chatIconButton {
+    @apply flex items-center gap-2 disabled:text-dark-secondary-text/50 disabled:pointer-events-none bg-transparent transition-all text-black hover:bg-slate-100 rounded-full p-2 focus:outline-none;
+  }
+
+  .chatSpan {
+    @apply hidden group-hover:flex text-xs font-semibold;
+  }
+
+  /* Thin light gray scrollbar utility (WebKit + Firefox) */
+  .thin-scrollbar {
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: #d1d5db transparent;
+    /* Firefox thumb, track */
+  }
+
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    /* Chrome/Safari/Edge */
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    /* gray-300 */
+    border-radius: 9999px;
+  }
+
+  /* Firefox-specific reinforcement */
+  @-moz-document url-prefix() {
+    .thin-scrollbar {
+      scrollbar-width: thin !important;
+      scrollbar-color: #d1d5db transparent !important;
+    }
+  }
+
+}

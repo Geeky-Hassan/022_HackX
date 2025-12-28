@@ -20,23 +20,23 @@ const SocialCard = () => {
         </div>
         <div className="flex flex-row items-center gap-5">
           <a
-            href="https://www.facebook.com/people/MyPath-AI/61566506248800/"
+           
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image src={facebook} alt="facebook icon" className="md:w-9 w-7" />
           </a>
-          <a href="https://www.instagram.com/mypath_ai/#" target="_blank" rel="noopener noreferrer">
+          <a  target="_blank" rel="noopener noreferrer">
             <Image src={instagram} alt="instagram icon" className="md:w-9 w-7" />
           </a>
           <a
-            href="https://www.linkedin.com/company/mypathai/"
+           
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image src={linkedin} alt="linkedin icon" className="md:w-9 w-7" />
           </a>
-          <a href="https://www.youtube.com/@mypathai" target="_blank" rel="noopener noreferrer">
+          <a  target="_blank" rel="noopener noreferrer">
             <Image src={youtube} alt="youtube icon" className="md:w-9 w-7" />
           </a>
         </div>
