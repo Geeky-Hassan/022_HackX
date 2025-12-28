@@ -30,7 +30,10 @@ export const NavItems = [
   //   label: "Blogs",
   //   href: "/redirect",
   // },
-  
+  {
+    label: "Meet Our Team",
+    href: "/team",
+  },
 ];
 
 export const HomeHeroContent = {
